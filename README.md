@@ -4,19 +4,19 @@
 
 If you are to develop for some embedded devices, most likely you have got the corresponding toolchain from your upstream vendor. But sometimes you will need your own toolchain.
 
-# Using LLVM
+# Use LLVM
 
-If you are a kernel developer, gcc suite are still the prefered option. Othercase please go straight to LLVM.
+If you are a kernel developer, GCC suite are still the prefered option. Othercases please go straight to LLVM.
 
 sudo apt install llvm clang
 
 # Prepare runtime compiler library
 
-The ready-for-use runtime compiler library can be downloaded directly from ARM develop website or https://archlinuxarm.org/packages/arm/compiler-rt
+The ready-for-use runtime compiler library can be downloaded directly from http://us.mirror.archlinuxarm.org/armv7h/extra/compiler-rt-8.0.0-1-armv7h.pkg.tar.xz
 
 extract the package and get the runtime compiler library: libclang_rt.builtins-armhf.a
 
-# Find runtime compiler library default location in your system
+# Find the runtime compiler library default location in your system
 
 clang -target arm-linux-gnueabihf -rtlib=compiler-rt -print-libgcc-file-name
 
@@ -53,6 +53,10 @@ make ARCH=arm headers_install INSTALL_HDR_PATH=/home/btian/crosstools/
 # References
 
 https://kernelnewbies.org/KernelHeaders, Linux kernel-headers howto.
-https://stackoverflow.com/questions/15165306/compile-a-static-binary-which-code-there-a-function-gethostbyname, stop using GNU libc.
+
+https://stackoverflow.com/questions/15165306/compile-a-static-binary-which-code-there-a-function-gethostbyname, why we should stop to use GNU libc.
+
 https://cdn.kernel.org/, Linux kernel source code.
-https://archlinuxarm.org/packages/arm/compiler-rt, compiler runtime libraries for ARM.
+
+http://us.mirror.archlinuxarm.org/armv7h/extra/compiler-rt-8.0.0-1-armv7h.pkg.tar.xz, compiler runtime libraries for ARM.
+
