@@ -12,7 +12,7 @@ sudo apt install llvm clang
 
 # Prepare runtime compiler library
 
-The ready-for-use runtime compiler library can be downloaded directly from ARM develop website, https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads.
+The ready-for-use runtime compiler library can be downloaded directly from ARM develop website or https://archlinuxarm.org/packages/arm/compiler-rt
 
 extract the package and get the runtime compiler library: libclang_rt.builtins-armhf.a
 
@@ -55,4 +55,4 @@ make ARCH=arm headers_install INSTALL_HDR_PATH=/home/btian/crosstools/
 https://kernelnewbies.org/KernelHeaders, Linux kernel-headers howto.
 https://stackoverflow.com/questions/15165306/compile-a-static-binary-which-code-there-a-function-gethostbyname, stop using GNU libc.
 https://cdn.kernel.org/, Linux kernel source code.
-https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads, compiler runtime libraries for ARM.
+https://archlinuxarm.org/packages/arm/compiler-rt, compiler runtime libraries for ARM.
